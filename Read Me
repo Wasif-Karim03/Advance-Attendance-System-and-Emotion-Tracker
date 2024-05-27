@@ -1,1 +1,88 @@
+# 📷 Automatic Attendance and Emotion Tracking System
+
+Welcome to the Automatic Attendance and Emotion Tracking System project! This device uses a camera, a Raspberry Pi 4 with a cooling system, and a small SSD to automate attendance and track emotions in university classes. After each class, it sends an email to the professor with two Excel files: one for attendance and one summarizing student emotions.
+
+## ✨ Features
+
+- 📋 **Automatic Attendance Recording**: Uses facial recognition to identify and record student presence.
+- 😊 **Emotion Tracking**: Analyzes facial expressions to track emotions and attentiveness during the class.
+- 📧 **Automated Email Reports**: Sends detailed reports to the professor after each class, including attendance status and emotional summaries.
+
+## 🔧 Components
+
+### Hardware
+
+- 🔌 Raspberry Pi 4 with a cooling system
+- 📷 Camera
+- 💾 Small SSD for storage
+
+### Software
+
+- 🐍 Python
+- 👁️ OpenCV (CV2) for facial recognition
+- 🧠 Haarcascade Frontal Face Default for face detection
+- 📦 Pickle for model serialization
+- 🔢 Numpy for numerical operations
+- 📊 Pandas for data manipulation and Excel file generation
+- 🔍 KNeighborsClassifier from sklearn.neighbors for classification
+
+## ⚙️ Installation
+
+### Hardware Setup
+
+- Assemble the Raspberry Pi 4 with the cooling system.
+- Connect the camera to the Raspberry Pi.
+- Attach the SSD for storage.
+
+### Software Setup
+
+```bash
+pip install numpy pandas opencv-python scikit-learn
+```
+
+### Clone the Repository
+
+```bash
+git clone <repository-url>
+cd <repository-directory>
+```
+
+### Load Pre-trained Models
+
+Ensure the pre-trained models are stored in the appropriate directory as specified in the configuration.
+
+## 🚀 Usage
+
+### Start the System
+
+```bash
+python main.py
+```
+
+### During the Class
+
+- The system will automatically detect faces and track emotions.
+- Attendance and emotion data will be recorded in real-time.
+
+### End of Class
+
+- The system will generate two Excel files:
+  - `attendance.xlsx`: Contains student names, emails, and attendance status.
+  - `emotions.xlsx`: Summarizes student emotions and attentiveness.
+- These files will be emailed to the professor automatically.
+
+## 📁 Code Structure
+
+- `main.py`: The main script to run the system.
+- `face_detection.py`: Handles face detection using Haarcascade.
+- `emotion_tracking.py`: Tracks and analyzes emotions using facial expressions.
+- `email_report.py`: Generates and sends email reports with the Excel files.
+- `utils.py`: Utility functions for data processing and model handling.
+
+## 🤝 Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request with your changes.
+
+
+
 
